@@ -1,0 +1,15 @@
+.carousel img {
+    width: 100%;
+    height: 85vh;
+  }
+  
+  .carousel ngb-carousel {
+    outline: none;
+  }
+  
+  @media only screen and (max-width: 767px) {
+    .carousel img {
+      height: 450px;
+    }
+  }
+  

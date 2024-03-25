@@ -1,0 +1,17 @@
+.banner {
+    position: relative;
+    top: 100px;
+    text-align: center;
+  }
+  
+  .banner > div {
+    max-width: 100%;
+  }
+  
+  .banner__img {
+    object-fit: contain;
+    height: auto;
+    width: 100%;
+  }
+
+  

@@ -1,0 +1,14 @@
+.container.faq {
+  padding: 20px;
+  text-align: center;
+}
+
+.container.faq .title p {
+  color: #333;
+  font-size: 24px;
+}
+
+.container.faq .accordion {
+  color: #555;
+  font-size: 16px;
+}
