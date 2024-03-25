@@ -1,0 +1,19 @@
+<div class="container text-center">
+    <h1 class="display-5">Product</h1>
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <img [src]="product?.imgUrl" alt="{{ product?.name }}" id="productImg">
+      </div>
+      <div class="col-md-6" *ngIf="product">
+        <h2>{{ product?.name }}</h2>
+        <p>{{ product?.description }}</p>
+        <p>Price: ${{ product?.price }}</p>
+        <div>
+          <label for="quantity">Quantity:</label>
+          <input type="number" id="quantity" formControlName="quantity">
+        </div>
+        <button class="btn btn-primary" (click)="addToCart(product.id)" [disabled]="form.invalid">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+  
