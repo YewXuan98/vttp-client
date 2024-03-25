@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { PaymentService } from '../services/payment.service';
 import { loadStripe, Stripe, StripeCardElement } from '@stripe/stripe-js';
 import { Router } from '@angular/router';
+import { key } from '../configurations/Keys/keys';
 
 @Component({
   selector: 'app-payment',
@@ -15,7 +16,7 @@ export class PaymentComponent {
   constructor(private paymentService: PaymentService, private router: Router) {}
 
   async ngOnInit() {
-    this.stripe = await loadStripe('pk_test_51NiZKsLtTFoBOb8wFWpjprx5p0Wa26RUc0qGXK5HKZNSUrdPzIDPQSQadSoQkdQ8CgED8arZIAuygiiRmTiWeJ0q00PF5pum1G');
+    this.stripe = await loadStripe(key.stripeKey);
 
     if (this.stripe) {
       const elements = this.stripe.elements();

@@ -2,16 +2,21 @@
   <h1 class="display-5">Account</h1>
   <div class="row justify-content-center">
     <div class="col-md-4">
-      <form (ngSubmit)="updateAccount()">
+      <form [formGroup]="userDetailsForm" (ngSubmit)="updateAccount()">
         <div class="mb-3">
           <label for="email">Email address</label>
-          <input type="email" class="form-control" id="email" [(ngModel)]="userDetails.email" name="email">
+          <input type="email" class="form-control" id="email" formControlName="email">
+          <div *ngIf="userDetailsForm.get('email')?.errors && userDetailsForm.get('email')?.touched" class="text-danger">
+            <div *ngIf="userDetailsForm.get('email')?.hasError('required')">Email is required.</div>
+            <div *ngIf="userDetailsForm.get('email')?.hasError('email')">Please enter a valid email address.</div>
+          </div>
         </div>
         <div class="mb-3">
           <label for="password">Password</label>
-          <input type="password" class="form-control" id="password" [(ngModel)]="userDetails.newPassword" name="password">
+          <input type="password" class="form-control" id="password" formControlName="newPassword">
+          <!-- You can add validation messages for newPassword if needed -->
         </div>
-        <button type="submit" class="btn btn-primary">Update</button>
+        <button type="submit" class="btn btn-primary" [disabled]="userDetailsForm.invalid">Update</button>
       </form>
     </div>
   </div>
