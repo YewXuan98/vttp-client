@@ -1,0 +1,43 @@
+.container.text-center {
+    position: relative;
+    top: 50px;
+  }
+  
+  .display-5 {
+    margin-bottom: 20px;
+  }
+  
+  .row.justify-content-center {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .col-md-4 {
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .form-control {
+    border-radius: 10px;
+  }
+  
+  .btn-primary {
+    border-radius: 10px;
+  }
+  
+  .text-danger {
+    color: #abc4ff; /* Change the color here */
+  }
+  
+  .text-danger {
+    font-size: 14px;
+  }
+  
+  .text-danger {
+    margin-top: 5px;
+  }
+  
+  .text-danger {
+    font-weight: bold;
+  }
+  
